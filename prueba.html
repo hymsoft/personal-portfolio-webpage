@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: darkblue;
+            height: 100vh;
+            /*            margin: 0 auto;*/
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        .main-container {
+            background-color: aliceblue;
+            width: 40vw;
+            height: 70vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                "header header header header"
+                "main main empty sidebar"
+                "footer footer footer footer";
+            border: 2px solid black;
+            border-radius: 10px
+        }
+
+
+        #header,
+        #main,
+        #sidebar,
+        #footer,
+        .empty {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            margin: 2px;
+            border: 1px solid black;
+        }
+
+        .empty {
+            grid-area: empty;
+            border: none;
+        }
+
+        #header {
+            background-color: orange;
+            grid-area: header;
+        }
+
+        #main {
+            background-color: skyblue;
+            grid-area: main;
+        }
+
+        #sidebar {
+            background-color: sandybrown;
+            grid-area: sidebar;
+        }
+
+        #footer {
+            background-color: chocolate;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <header id="header">header</header>
+        <div class="empty">empty</div>
+        <article id="main">main</article>
+        <article id="sidebar">sidebar</article>
+        <footer id="footer">footer</footer>
+    </div>
+</body></html>
